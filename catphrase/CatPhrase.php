@@ -31,5 +31,5 @@ class CatPhrase
 		// return text limited bigin 0 and finished in limit_text
 		return substr($this->text, 0, strrpos($limit_text, ' ')) . ' ...';
 	}
-
+  
 }
