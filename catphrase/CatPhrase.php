@@ -12,12 +12,11 @@ namespace catphrase;
 class CatPhrase
 {
 	public function __construct(private string $text, private int $limit = 100, private bool $clear = true) {
-
-		// $this->exec();
 	}
 
 	public function exec(): string 
 	{
+		$this->text = trim($this->text);
 		
 		if($this->clear == true) {
 			$this->text = strip_tags($this->text);
@@ -29,8 +28,8 @@ class CatPhrase
 		
 		$limit_text = substr($this->text, 0, $this->limit);
 		
-		// reetornar a palavras de $text que vao desde 0 ate $ultimo
+		// return text limited bigin 0 and finished in limit_text
 		return substr($this->text, 0, strrpos($limit_text, ' ')) . ' ...';
 	}
-	
+  
 }
