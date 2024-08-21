@@ -1,7 +1,6 @@
 <?php
 
 use catphrase\CatPhrase;
-
 require_once('CatPhrase.php');
 
 print("\n<h1>Test</h1>\n\n");
